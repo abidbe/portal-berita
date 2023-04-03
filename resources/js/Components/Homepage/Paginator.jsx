@@ -4,7 +4,7 @@ const Paginator = ({ meta }) => {
     const prev = meta.links[0].url;
     const next = meta.links[meta.links.length - 1].url;
     const current = meta.current_page;
-    console.log("p", meta);
+    // console.log("p", meta);
     return (
         <div>
             <div className="btn-group">

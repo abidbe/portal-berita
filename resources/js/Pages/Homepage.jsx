@@ -6,11 +6,12 @@ import Paginator from "@/Components/Homepage/Paginator";
 
 
 export default function Homepage(props) {
+    // console.log('props :', props);
     
     return (
         <div className="min-h-screen bg-slate-50">
             <Head title={props.title} />
-            <Navbar />
+            <Navbar user={props.auth.user} />
             <div className="flex justify-center flex-col items-center gap-4 m-4 p-4 lg:flex-row lg:flex-wrap lg:items-stretch">
                 <NewsLists news={props.news.data} /> 
             </div>

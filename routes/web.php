@@ -29,6 +29,9 @@ Route::get('/welcome', function () {
     ]);
 });
 
+Route::post('/news', [NewsController::class, 'store'])->middleware(['auth', 'verified'])->name('create.news');
+Route::get('/news', [NewsController::class, 'show'])->middleware(['auth', 'verified'])->name('my.news');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
